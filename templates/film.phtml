@@ -1,0 +1,22 @@
+<section class="Fiche">
+    <img class="Fiche-affiche" src="<?=$film->getAfficheFilm();?>" alt="<?= $film->getTitreFilm();?>">
+    <div class="Fiche-content">
+        <h2 class="Fiche-titre-DK"><?= $film->getTitreFilm();?></h2>
+        <div class="Fiche-infos">
+            <p class="Fiche-infos-info"> Année de sortie : <?=$film->getAnneeFilm();?></p>
+            <p>Realisateur-ice : </p>
+            <?php foreach ($realisateurs as $realisateur): ?>
+                <li><?=$realisateur?></li>
+            <?php endforeach ?>
+            <p>Acteur-ice-s : </p>
+            <?php foreach ($acteurs as $acteur): ?>
+                <li><?=$acteur?></li>
+            <?php endforeach ?>
+        </div>
+        <p class="Fiche-resume"><?= $film->getResumefilm();?></p>
+        <a class="Fiche-retour" href="index.php"><i class="fa-solid fa-angle-left fa-xs"></i> revenir aux films</a>
+    </div>
+</section>
+
+
+

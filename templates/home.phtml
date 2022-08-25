@@ -1,0 +1,14 @@
+<section class="Films">
+    <?php
+    foreach ($films as $film): ?>
+    <div class="Film">
+        <a href="index.php?action=film&idFilm=<?=$film->getIdFilm();?>" class="Film-affiche">
+            <img src="<?= $film->getAfficheFilm();?>" alt="<?=$film->getTitreFilm();?>" class="Film-affiche-img">
+        </a>
+        <div class="Film-desc">
+            <h2 class="Film-desc-titre"><?=$film->getTitreFilm();?></h2>
+            <p class="Film-desc-annee"><?=$film->getAnneeFilm();?></p>
+        </div>
+    </div>
+    <?php endforeach; ?>
+</section>

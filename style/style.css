@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Header {
+  background-color: black;
+  height: 150px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header-titre {
+  margin: 0;
+}
+
+.Header-titre-lien {
+  color: white;
+  text-decoration: none;
+}
+
+.Main {
+  min-height: calc(100vh - 310px);
+}
+
+.Films {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Film {
+  position: relative;
+}
+
+.Film-affiche {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  display: block;
+}
+
+.Film-affiche-img {
+  max-height: 600px;
+  max-width: none;
+  min-width: 100%;
+  min-height: 600px;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.Film-desc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Film-affiche-img:hover .Film-desc {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Film-affiche-img:hover {
+  opacity: .5;
+}
+
+.Fiche {
+  min-height: calc(100vh - 200px);
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Fiche-titre-DK {
+  margin-bottom: 20px;
+}
+
+.Fiche-affiche {
+  width: 500px;
+  margin-right: 70px;
+}
+
+.Fiche-content {
+  height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 20px;
+}
+
+.Fiche-infos {
+  width: 550px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.Fiche-resume {
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.Fiche-retour {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: blue;
+  text-decoration: none;
+}
+
+.Footer {
+  background-color: black;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.Footer-content {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.Footer-content-sns a {
+  margin-right: 10px;
+}
+/*# sourceMappingURL=style.css.map */
