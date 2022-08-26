@@ -23,19 +23,29 @@ class DefaultController extends AbstractController
 
         $film = $filmModel->findFilm($idFilm);
 
-        if(!$film){
-            echo 'ERREUR : aucun film ne possède l\'ID '.$idFilm;
-            exit;
-        }
-
         $acteurs = $filmModel->getActFilm($idFilm);
-        $realisateur = $filmModel->getRealFilm($idFilm);
+        $realisateurs = $filmModel->getRealFilm($idFilm);
 
         return $this->render('film', [
             'film' => $film,
             'acteurs' => $acteurs,
-            'realisateurs' => $realisateur,
+            'realisateurs' => $realisateurs,
         ], 'base.phtml');
     }
 
+    public function genPersonne(): string
+    {
+        $persModel = new PersonneModel();
+
+        $idPers = (int)$_GET['idPers'];
+
+        $personne = $persModel->findPersonne($idPers);
+
+        $films = $persModel->getFilmPers($idPers);
+
+        return $this->render('personne', [
+            'personne' => $personne,
+            'films' => $films,
+        ], 'base.phtml');
+    }
 }

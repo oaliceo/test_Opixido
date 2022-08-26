@@ -3,14 +3,14 @@
     <div class="Fiche-content">
         <h2 class="Fiche-titre-DK"><?= $film->getTitreFilm();?></h2>
         <div class="Fiche-infos">
-            <p class="Fiche-infos-info"> Année de sortie : <?=$film->getAnneeFilm();?></p>
-            <p>Realisateur-ice : </p>
+            <p> Année de sortie : <?=$film->getAnneeFilm();?></p>
+            <p>Realisateur-ice-s : </p>
             <?php foreach ($realisateurs as $realisateur): ?>
-                <li><?=$realisateur?></li>
+                <li><a href="index.php?action=personne&idPers=<?=$realisateur[1]?>"><?=$realisateur[0]?></a></li>
             <?php endforeach ?>
             <p>Acteur-ice-s : </p>
             <?php foreach ($acteurs as $acteur): ?>
-                <li><?=$acteur?></li>
+                <li><a href="index.php?action=personne&idPers=<?=$acteur[1]?>"><?=$acteur[0]?></a></li>
             <?php endforeach ?>
         </div>
         <p class="Fiche-resume"><?= $film->getResumefilm();?></p>

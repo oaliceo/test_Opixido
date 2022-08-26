@@ -47,18 +47,16 @@ class FilmModel
         WHERE film_f_id = :idFilm';
         $aPersonnes = [];
         $aResults = $this->db->getAllResults($sql, [':idFilm' => $idFilm]);
-        // var_dump($aResults);
 
         foreach ($aResults as $personne){
             $aPersonnes[] = $personne['p_nom'];
         }
-        // var_dump($aPersonnes);
         return $aPersonnes;
     }
 
     public function getActFilm(int $idFilm): array
     {
-        $sql = 'SELECT p_nom
+        $sql = 'SELECT p_nom, p_id
         FROM film_has_personne
         INNER JOIN film ON film_has_personne.film_f_id = film.f_id
         INNER JOIN personne ON film_has_personne.personne_p_id = personne.p_id
@@ -69,15 +67,15 @@ class FilmModel
         // var_dump($aResults);
 
         foreach ($aResults as $personne){
-            $aPersonnes[] = $personne['p_nom'];
+            $aPersonnes[] = [$personne['p_nom'], $personne['p_id']];
         }
-        // var_dump($aPersonnes);
+
         return $aPersonnes;
     }
 
     public function getRealFilm(int $idFilm): array
     {
-        $sql = 'SELECT p_nom
+        $sql = 'SELECT p_nom, p_id
         FROM film_has_personne
         INNER JOIN film ON film_has_personne.film_f_id = film.f_id
         INNER JOIN personne ON film_has_personne.personne_p_id = personne.p_id
@@ -85,14 +83,11 @@ class FilmModel
         AND film_f_id = :idFilm';
         $aPersonnes = [];
         $aResults = $this->db->getAllResults($sql, [':idFilm' => $idFilm]);
-        // var_dump($aResults);
 
         foreach ($aResults as $personne){
-            $aPersonnes[] = $personne['p_nom'];
+            $aPersonnes[] = [$personne['p_nom'], $personne['p_id']];
         }
-        // var_dump($aPersonnes);
+
         return $aPersonnes;
     }
-
-    
 }

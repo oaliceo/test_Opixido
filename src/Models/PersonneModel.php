@@ -36,4 +36,21 @@ class PersonneModel
 
         return $oPersonne;
     }
+
+    // Trouver le film sur lequel la personne à travaillé
+    public function getFilmPers(int $idPers): array
+    {
+        $sql = 'SELECT f_titre, f_id, f_affiche
+        FROM film_has_personne
+        INNER JOIN film ON film_has_personne.film_f_id = film.f_id
+        INNER JOIN personne ON film_has_personne.personne_p_id = personne.p_id
+        WHERE personne_p_id = :idPers';
+        $aFilms = [];
+        $aResults = $this->db->getAllResults($sql, [':idPers' => $idPers]);
+
+        foreach ($aResults as $film){
+            $aFilms[] = [$film['f_titre'], $film['f_id'], $film['f_affiche']];
+        }
+        return $aFilms;
+    }
 }

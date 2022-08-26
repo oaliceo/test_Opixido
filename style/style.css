@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -152,6 +152,15 @@ body {
           justify-content: flex-start;
 }
 
+.Fiche-infos a {
+  color: #0e4271;
+  text-decoration: none;
+}
+
+.Fiche-infos a:hover {
+  text-decoration: underline;
+}
+
 .Fiche-resume {
   width: 100%;
   text-align: justify;
@@ -161,8 +170,63 @@ body {
 .Fiche-retour {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  color: blue;
+  color: #0e4271;
   text-decoration: none;
+}
+
+.Personne {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Personne-titre {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Personne-titre h2 {
+  margin-bottom: 30px;
+}
+
+.Personne-films {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Personne-films a {
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  display: block;
+}
+
+.Personne-films a img {
+  max-height: 450px;
+  max-width: none;
+  min-width: 100%;
+  min-height: 450px;
+}
+
+.Personne-films a:not(:last-child) {
+  margin-right: 30px;
 }
 
 .Footer {

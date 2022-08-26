@@ -1,0 +1,11 @@
+<section class="Personne">
+    <div class="Personne-titre">
+        <h2><?= $personne->getNomPersonne();?> (<?= $personne->getRolePersonne();?>)</h2>
+        <h3>Cinématographie</h3>
+    </div>
+    <div class="Personne-films">
+        <?php foreach ($films as $film): ?>
+            <a href="index.php?action=film&idFilm=<?=$film[1]?>"><img src="<?=$film[2]?>" alt="<?=$film[0]?>"></a>
+        <?php endforeach ?>
+    </div>
+</section>
