@@ -137,8 +137,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -147,9 +148,6 @@
 
 .Fiche-infos {
   width: 550px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .Fiche-infos a {
@@ -159,6 +157,10 @@
 
 .Fiche-infos a:hover {
   text-decoration: underline;
+}
+
+.Fiche-infos p, .Fiche-infos li {
+  margin-bottom: 10px;
 }
 
 .Fiche-resume {

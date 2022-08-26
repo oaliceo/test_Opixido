@@ -3,7 +3,7 @@
     <div class="Fiche-content">
         <h2 class="Fiche-titre-DK"><?= $film->getTitreFilm();?></h2>
         <div class="Fiche-infos">
-            <p> Année de sortie : <?=$film->getAnneeFilm();?></p>
+            <p>Année de sortie : <?=$film->getAnneeFilm();?></p>
             <p>Realisateur-ice-s : </p>
             <?php foreach ($realisateurs as $realisateur): ?>
                 <li><a href="index.php?action=personne&idPers=<?=$realisateur[1]?>"><?=$realisateur[0]?></a></li>
